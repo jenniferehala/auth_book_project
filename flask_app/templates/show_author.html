@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+
+    <title>Show Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <a class="btn btn-warning float-end mt-2" href="/books">Dashboard</a>
+        <h1>Show Author Page</h1>
+
+        <h1>Info for author number <span class="text-info">{{ author.id }}</span></h1>
+
+        <h2>Name: <span class="text-info">{{ author.first_name }} {{ author.last_name }}</span> </h2>
+        <h2>Books:
+            {% for book in author.books %}
+            <li><span class="text-info">{{ book.title}}</span></li>
+            {% endfor %}
+        </h2>
+
+
+
+    </div>
+
+</body>
+
+</html>
